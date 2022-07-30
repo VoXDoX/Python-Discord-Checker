@@ -87,11 +87,12 @@ Owner Link: https://t.me/The_VoX
 
             status = discord.getInfoToken()
             if status:
+                cards = discord.getCards()
                 with open(file="./results/info-accs-tokens.txt",
                           mode="a",
                           encoding="UTF-8") as file:
                     string = f"{token} | username: {status[0]} | phone: {status[1]} | " \
-                             f"email: {status[2]} | mfa: {status[3]}\n"
+                             f"email: {status[2]} | mfa: {status[3]} | verified: {status[4]} | nitro: {status[5]} | Cards: {cards}\n"
                     file.write(string)
             else:
                 print(f"Не получилось собрать информацию: {token}")
@@ -116,11 +117,12 @@ Owner Link: https://t.me/The_VoX
                     status = discord.getInfoToken()
 
                     if status:
+                        card = discord.getCards()
                         with open(file="./results/info-accs-tokens.txt",
                                   mode="a",
                                   encoding="UTF-8") as file:
-                            string = f"{token} | username: {status[0]} | phone: {status[1]} | " \
-                                     f"email: {status[2]} | mfa: {status[3]}\n"
+                            string = f"{token} | username: {status[0]} | phone: {status[1]} |  email: {status[2]} |" \
+                                     f" mfa: {status[3]} | verified: {status[4]} | nitro: {status[5]} | Cards: {card}\n"
                             file.write(string)
                         print("SUCCESS: " + string)
                     else:
