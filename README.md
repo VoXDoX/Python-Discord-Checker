@@ -1,2 +1,2 @@
 # Discord-Checker-by-VoXDoX
- Python версия чекера токенов Discord с получением данных о токене
+ Python версия чекера токенов Discord с получением данных о токене.
